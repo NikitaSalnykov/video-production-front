@@ -19,6 +19,7 @@ function App() {
           <Route path="/price" element={<PricePage/>} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
+        
       </Routes>
     </div>
   );
