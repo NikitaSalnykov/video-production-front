@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Container } from '../Container/Container';
 import actorPhoto from '../../images/artist.png'
-import directorPhoto from '../../images/dirctor.png'
+import directorPhoto from '../../images/dirctor1.png'
 
 const modalRoot = document.querySelector('#start');
 
