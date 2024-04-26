@@ -23,7 +23,7 @@ const SharedLayout = () => {
       <Suspense fallback="....">
         <Outlet />
       </Suspense>
-      <StarScreen/>
+      {/* <StarScreen/> */}
       <Footer/>
     </>
   );

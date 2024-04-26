@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export const MediaList = ({videos}) => {
 
@@ -7,6 +7,8 @@ export const MediaList = ({videos}) => {
         acc[`video${index + 1}`] = useRef(null);
         return acc;
     }, {});
+
+
 
     const handleMouseEnter = (videoRef) => {
         videoRef.current.play();
@@ -21,7 +23,7 @@ export const MediaList = ({videos}) => {
                         {videos.map((video, index) => (
                             <div key={index} className="w-full">
                                 <div className="wrap-video" onMouseEnter={() => handleMouseEnter(videoRefs[`video${index + 1}`])} onMouseLeave={() => handleMouseLeave(videoRefs[`video${index + 1}`])}>
-                                    <video className="object-cover h-96 w-full bg-black" ref={videoRefs[`video${index + 1}`]} loop >
+                                    <video className="object-cover h-96 w-full bg-black" ref={videoRefs[`video${index + 1}`]} loop controls>
                                         <source 
                                             src={video.src}
                                             type="video/mp4"/>

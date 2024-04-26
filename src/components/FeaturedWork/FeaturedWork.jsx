@@ -29,7 +29,7 @@ export const FeaturedWork = () => {
   return (
     <div className="relative flex min-h-screen flex-col bg-black">
     <div className="min-h-28">
-        <div className="mx-auto py-4">
+        <div className="mx-auto pb-4">
             <h2 className="font-black text-6xl md:text-9xl text-white uppercase">
                 featured work
             </h2>
