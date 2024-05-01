@@ -8,16 +8,22 @@ const Header = () => {
   };
 
   return (
-    <div className="mx-4 py-4 text-xl md:text-3xl uppercase">
-      <div className='flex items-center justify-between bg-[#ffffff] text-[#212121] rounded-full px-6 py-1'>
-        <div className="flex  gap-2 items-center font-black" >
-        <Svg size={55} fill={'#212121'} stroke={"white"} id="icon-photo"/>
-        <div className="flex flex-col md:flex-row md:gap-1 leading-1 leading-none">
-        <div>Dmitriy</div>
-        <div>Sheliuhov</div>
+    <div className="mx-4 py-4 text-xl md:text-2xl uppercase">
+      <div className='flex flex-row-reverse items-center justify-between  text-[#212121] rounded-full px-6 py-1'>
+        <div className="flex flex-raw items-center scale-80 md:scale-150 md:pr-8" >
+        <div className="relative">
+        <Svg size={44} fill={'white'} stroke={"#212121"} id="icon-photo2"/>
+        <div className=' rounded-full bg-red absolute top-[20%] right-[33%] border-[3px] border-neutral-50'>
+          <div className="w-[6px] h-[6px] rounded-full bg-red "></div>
         </div>
         </div>
-        <div className="">
+        <div className="flex flex-col  leading-[16px] decoration-clone ml-1 text-[#ffffff]">
+        <div className='text-sm font-medium  leading-[18px]'>Dmitriy</div>
+        <div className='text-sm font-medium leading-[8px]'>Shelygov</div>
+        <div className='text-[7px] font-extralight leading-[12px] text-red lowercase'>cameraman & director</div>
+        </div>
+        </div>
+        <div className="text-[#ffffff]">
           <nav>
             <ul>
               <li>About</li>
