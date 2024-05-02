@@ -31,7 +31,7 @@ export const FeaturedWork = () => {
     <div className="min-h-28">
         <div className="mx-auto pb-4">
             <h2 className="font-black text-6xl md:text-9xl text-white uppercase">
-                featured work
+                featured <span className='opacity-80'>work</span>
             </h2>
         <MediaList videos={videos}/>
             <h2 className="font-black text-7xl text-white text-center uppercase my-16 hover:bg-white hover:text-black hover:rounded-full hover:px-6">

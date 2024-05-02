@@ -20,14 +20,15 @@ const Header = () => {
         <div className="flex flex-col  leading-[16px] decoration-clone ml-1 text-[#ffffff]">
         <div className='text-sm font-medium  leading-[18px]'>Dmitriy</div>
         <div className='text-sm font-medium leading-[8px]'>Shelygov</div>
-        <div className='text-[7px] font-extralight leading-[12px] text-red lowercase'>cameraman & director</div>
+        <div className='text-[6px] font-extralight leading-[12px] text-white uppercase opacity-70'>cameraman & director</div>
         </div>
         </div>
         <div className="text-[#ffffff]">
           <nav>
-            <ul>
+            <ul className='flex gap-4'>
+              <li>Projects</li>
               <li>About</li>
-              <li></li>
+              <li>Contacts</li>
             </ul>
           </nav>
         </div>
