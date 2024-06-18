@@ -1,15 +1,15 @@
 
 import photo from '../../assets/author-photo2.jpg'
 
-export const Skills = () => {
+export const Сoloristics = () => {
   return (
 <div className="  w-full flex flex-col md:flex-row-reverse  ">
 
 <div className="md:w-1/2 h-[380px] md:h-[480px]   object-cover overflow-hidden">
-  <img src={photo} alt="dmitriy shelyugov" className='w-[100%] h-[100%] brightness-[1.03] object-cover' />
+ 
 </div>
 <div className="md:w-1/2 flex flex-col justify-center m-4">
-  <h2 className='font-black text-6xl lg:text-9xl uppercase'>My <span className='opacity-60'>skills</span></h2>
+  <h2 className='font-black text-4xl lg:text-6xl uppercase'>Сoloristics <span className='opacity-60'></span></h2>
   <div className=' hidden  py-4 md:flex'>
     <div className='w-[20%] h-[5px] bg-white'></div>
     <div className='w-[40%] h-[5px] bg-white opacity-40'></div>
