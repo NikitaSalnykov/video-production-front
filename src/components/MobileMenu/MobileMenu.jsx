@@ -2,14 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Svg from '../Svg/Svg';
 import { Logo } from '../Logo/Logo';
-import Footer from '../Footer/Footer';
 import { NavLink } from 'react-router-dom';
 
 const modalRoot = document.querySelector('#menu-root');
 
 export const MobileMenu = ({ isOpen, onCloseModal }) => {
   const modalRef = useRef(null);
-
   const [isOpenAnimation, setIsOpenAnimation] = useState(isOpen);
 
   useEffect(() => {
@@ -53,7 +51,7 @@ export const MobileMenu = ({ isOpen, onCloseModal }) => {
     <>
       {isOpen &&
         createPortal(
-          <div className={`md:hidden transition-all duration-300 ${isOpenAnimation ? "opacity-100" : "opacity-0"} modal-overlay flex items-center justify-center fixed bg-black bg-opacity-100 top-0 left-0 w-full h-full z-50`}>
+          <div className={`lg:hidden transition-all duration-300 ${isOpenAnimation ? "opacity-100" : "opacity-0"} modal-overlay flex items-center justify-center fixed bg-black bg-opacity-100 top-0 left-0 w-full h-full z-50`}>
             <div
               className="w-full h-full"
               ref={modalRef}

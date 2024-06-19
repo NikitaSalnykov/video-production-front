@@ -1,9 +1,19 @@
 import { useState } from 'react';
 import Svg from '../Svg/Svg'
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { MobileMenu } from '../MobileMenu/MobileMenu';
+
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   const onToglegModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -12,8 +22,9 @@ const Header = () => {
     <div className="mx-4 py-4 text-xl md:text-2xl uppercase">
       <div className='flex flex-row-reverse items-center justify-between  text-[#212121] rounded-full px-6 py-1'>
         <div className="flex gap-12">
+          <div className="flex justify-center items-center space-x-2">
           <div className="text-white text-sm flex flex-col gap-2 justify-center items-center">
-            <div class="flex justify-center space-x-2">
+            <div class=" justify-center space-x-2 hidden lg:flex">
       <Link
         href="#!"
         type="button"
@@ -45,13 +56,16 @@ const Header = () => {
           </svg>
         </span>
       </Link>
-
-      
-    </div>
+            </div>  
+          </div>
+          <div className="text-white text-sm hidden lg:flex  flex-col">
+            <button  onClick={() => changeLanguage('en')} className={`${currentLanguage === 'en' ? 'font-semibold' : 'opacity-75'}`}>ENG</button>
+            <button onClick={() => changeLanguage('ua')} className={`${currentLanguage === 'ua' ? 'font-semibold' : 'opacity-75'}`}>UKR</button>
+          </div>
           </div>
         <div className="flex flex-raw items-center scale-80 md:scale-150 md:pr-8" >
         <div className="relative">
-        <Svg size={44} fill={'white'} stroke={"#212121"} id="icon-photo2"/>
+        <Svg size={38} fill={'white'} stroke={"#212121"} id="icon-photo2"/>
         <div className=' rounded-full bg-red absolute top-[20%] right-[33%] border-[3px] border-[#212121]'>
           <div className="w-[6px] h-[6px] rounded-full bg-white "></div>
         </div>
@@ -63,15 +77,21 @@ const Header = () => {
         </div>
         </div>
         </div>
-        <div className="text-[#ffffff]">
+        <div className="text-[#ffffff] hidden lg:block">
           <nav>
             <ul className='flex gap-4'>
-              <li>Works</li>
-              <li>About</li>
-              <li>Contacts</li>
+              <li>{t('home')}</li>
+              <li>{t('about')}</li>
+              <li>{t('contacts')}</li>
+              <li>{t('all-works')}</li>
             </ul>
           </nav>
         </div>
+        <div onClick={onToglegModal} className="block lg:hidden">
+          <Svg size={38} fill={'white'} stroke={"#212121"} id="icon-mobile-menu-open"/>
+        </div>
+        <MobileMenu isOpen={isModalOpen}
+        onCloseModal={onToglegModal}/>
       </div>
     </div>
   )
